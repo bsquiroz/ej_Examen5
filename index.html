@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>examen 5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="card">
+        <div class="card-body">
+          <form
+            id="Formulario"
+            onsubmit="event.preventDefault(), addUser()"
+            action="/users.php"
+          >
+            <div class="mb-3">
+              <label for="marca" class="form-label">Marca</label>
+              <input
+                id="marca"
+                type="text"
+                class="form-control"
+                placeholder="Ingresa la marca del vehiculo"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="modelo" class="form-label">Modelo</label>
+              <input
+                id="modelo"
+                type="number"
+                class="form-control"
+                placeholder="Ingresa el modelo"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="color" class="form-label">Color</label>
+              <input
+                id="color"
+                type="text"
+                class="form-control"
+                placeholder="Ingresa tel color"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="año" class="form-label">Año</label>
+              <input
+                id="año"
+                type="number"
+                class="form-control"
+                placeholder="Ingresa el año"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="precio" class="form-label">Precio</label>
+              <input
+                id="precio"
+                type="number"
+                class="form-control"
+                placeholder="Ingresa el precio sin puntos"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr id="a">
+            <th>Id</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Color</th>
+            <th>Año</th>
+            <th>Precio</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="container-users"></tbody>
+      </table>
+    </div>
+    <script src="./js.js"></script>
+  </body>
+</html>
